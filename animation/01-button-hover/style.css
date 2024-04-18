@@ -8,7 +8,7 @@
   font-family: Arial, sans-serif;
 }
 
-button {
+button{
   border-radius: 8px;
   border: none;
   background-color: #2563eb;
@@ -16,4 +16,24 @@ button {
   font-size: 18px;
   padding: 16px 24px;
   text-align: center;
+
+  /* To smoothly ease in and out of the button */
+  transition: 0.2s ease-in-out 0.3s;
+}
+
+/* Hover action for the button class */
+button:hover {
+  
+  /* Adds the type of cursor you see when you hover over the button */
+  cursor:pointer; 
+
+  /*How big the hover expands*/
+  transform: scale(1.3);
+
+  /*The background colour when expanded*/
+  background:#2563eb;
+
+  /*The text colour when expanded*/
+  color: white;
+
 }

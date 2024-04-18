@@ -1,0 +1,12 @@
+div {
+    background-color: red;
+    color:white;
+    font-size: 32px;
+
+    /* Aligning text to the center of the div */
+    text-align: center;
+
+    /* Font-weight is to show "boldness" of text */
+    font-weight: bold;
+
+}
