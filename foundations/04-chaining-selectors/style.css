@@ -1,1 +1,13 @@
-/* Add CSS Styling */
+/* Chaining CSS classes */
+
+.avatar.proportioned{
+    width: 300px;
+    
+    /* Auto value is used to resize the image without losing its proportions. */
+    height: auto;
+}
+
+.avatar.distorted{
+    width: 200px;
+    height: 400px;
+}
