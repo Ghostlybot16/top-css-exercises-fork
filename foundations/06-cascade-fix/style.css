@@ -2,10 +2,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.para,
-.small-para {
-  color: hsl(0, 0%, 0%);
-  font-weight: 800;
+/*  The specificity between .para and .small-para were the same before.
+    So having .para class execute befor .small-para will allow the second paragraph
+    to execute .small-para since there is a tie and whatever appears afterwards would excute.  */
+.para {
+  font-size: 22px;
 }
 
 .small-para {
@@ -13,8 +14,21 @@ body {
   font-weight: 800;
 }
 
-.para {
-  font-size: 22px;
+.para,
+.small-para {
+  color: hsl(0, 0%, 0%);
+  font-weight: 800;
+}
+
+
+/* same case as with .para and .small-para 
+  there is a tie between .button and .confirm since neither one is more specific than the other so the 
+  second declaration would hold true so changing the positioning would make the .confirm class execute which 
+  is what is required. */
+.button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
 }
 
 .confirm {
@@ -23,20 +37,17 @@ body {
   font-weight: bold;
 } 
 
-.button {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-}
-
-.child {
+/* Adding .text and chaining adds specificity to this block hence executing */
+.text.child {
   color: rgb(0, 0, 0);
   font-weight: 800;
   font-size: 14px;
 }
+
 
 div.text {
   color: rgb(0, 0, 0);
   font-size: 22px;
   font-weight: 100;
 }
+
