@@ -1,6 +1,29 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .header  {
-  font-family: monospace;
+  font-family: Arial, Helvetica, sans-serif;
   background: papayawhip;
+  /*
+  margin: 10px;
+
+  display: flex ->  to make all header elements appear horizontally
+  display: flex;
+
+  space inbetween header elements 
+  justify-content: space-between;
+ */
+
+  /* makes the header elements appear horizontal */
+  display: flex;
+  /* space inbetween elements */
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px;
 }
 
 .logo {
@@ -9,11 +32,27 @@
   color: tomato;
   background: white;
   padding: 4px 32px;
+
+  /* margin to center the element horizontally and vertically 
+  margin: 10px;
+  */
+
 }
 
 ul {
-  /* this removes the dots on the list items*/
+  /* this removes the dots on the list items */
   list-style-type: none;
+  
+  /*
+  display: flex -> makes the list items appear horizontal 
+  display: flex;
+
+  margin that is on the top of the links 
+  margin-top: 30px;
+  */ 
+
+  display: flex;
+  gap: 8px;
 }
 
 a {
@@ -22,4 +61,9 @@ a {
   padding: 8px;
   /* this removes the line under the links */
   text-decoration: none;
+
+  /* margin spacing in between the numbers 
+  margin: 10px;
+  */
+  
 }
