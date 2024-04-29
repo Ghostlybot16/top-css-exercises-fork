@@ -2,6 +2,11 @@
 you'll learn about it later. */
 @import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,900&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   background: #eee;
@@ -12,6 +17,12 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  /* displays header elements horizontally */
+  display: flex;
+  padding: 8px;
+  /* adds space inbetween the two elements to space out the headers to the left and right*/
+  justify-content: space-between;
+  gap: 8px;
 }
 
 .profile-image {
@@ -27,6 +38,18 @@ body {
   font-size: 32px;
   font-weight: 900;
   font-style: italic;
+}
+
+.left-items,
+.right-items{
+  /* displays the items of both headers horizontally */
+  display: flex;
+
+  /* centered vertically */
+  align-items: center;
+
+  /* gap between elements */
+  gap: 16px;
 }
 
 button {
@@ -45,4 +68,7 @@ a {
 
 ul {
   list-style-type: none;
+  /* display the list horizontally */
+  display: flex;
+  gap: 16px;
 }
